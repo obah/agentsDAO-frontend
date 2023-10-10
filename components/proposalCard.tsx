@@ -1,5 +1,4 @@
 import { Id, Proposal, Vote } from "@/types";
-import styles from "@/app/page.module.css";
 
 interface Props {
   proposal: Proposal;
@@ -20,31 +19,18 @@ function ProposalCard({ proposal, voteFn, executeFn }: Props) {
       <p>No votes: {noVotes}</p>
       <p>Executed: {executed.toString()}</p>
       {deadline.getTime() > Date.now() && !executed ? (
-        <div className={styles.flex}>
-          <button
-            className={styles.button2}
-            onClick={() => voteFn(proposalId, "YES")}
-          >
-            Vote YES
-          </button>
-          <button
-            className={styles.button2}
-            onClick={() => voteFn(proposalId, "NO")}
-          >
-            Vote NO
-          </button>
+        <div>
+          <button onClick={() => voteFn(proposalId, "YES")}>Vote YES</button>
+          <button onClick={() => voteFn(proposalId, "NO")}>Vote NO</button>
         </div>
       ) : deadline.getTime() < Date.now() && !executed ? (
-        <div className={styles.flex}>
-          <button
-            className={styles.button2}
-            onClick={() => executeFn(proposalId)}
-          >
+        <div>
+          <button onClick={() => executeFn(proposalId)}>
             Execute Proposal {yesVotes > noVotes ? "(YES)" : "(NO)"}
           </button>
         </div>
       ) : (
-        <div className={styles.description}>Proposal Executed</div>
+        <div>Proposal Executed</div>
       )}
     </>
   );

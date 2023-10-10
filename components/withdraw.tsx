@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { writeContract, waitForTransaction } from "wagmi/actions";
-import styles from "@/app/page.module.css";
 
 function Withdraw() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -29,11 +28,9 @@ function Withdraw() {
   return (
     <div>
       {isLoading ? (
-        <button className={styles.button}>Loading...</button>
+        <button>Loading...</button>
       ) : (
-        <button className={styles.button} onClick={withdrawDaoEther}>
-          Withdraw DAO ETH
-        </button>
+        <button onClick={withdrawDaoEther}>Withdraw DAO ETH</button>
       )}
     </div>
   );

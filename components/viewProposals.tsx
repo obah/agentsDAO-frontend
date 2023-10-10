@@ -4,7 +4,6 @@ import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { Id, Proposal, Vote } from "@/types";
 import { useState } from "react";
 import { writeContract, waitForTransaction } from "wagmi/actions";
-import styles from "@/app/page.module.css";
 import ProposalCard from "./proposalCard";
 
 type Props = {
@@ -53,17 +52,13 @@ export default function ViewProposals({ proposals }: Props) {
   return (
     <>
       {isLoading ? (
-        <div className={styles.description}>
-          Loading... Waiting for transaction...
-        </div>
+        <div>Loading... Waiting for transaction...</div>
       ) : proposals.length === 0 ? (
-        <div className={styles.description}>
-          No proposals have been created yet
-        </div>
+        <div>No proposals have been created yet</div>
       ) : (
         <div>
           {proposals.map((p) => (
-            <div key={p.proposalId} className={styles.card}>
+            <div key={p.proposalId}>
               <ProposalCard
                 proposal={p}
                 voteFn={voteForProposal}

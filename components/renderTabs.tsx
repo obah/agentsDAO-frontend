@@ -6,7 +6,6 @@ import CreateProposal from "@/components/createProposal";
 import { Id, Proposal } from "@/types";
 import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { readContract } from "wagmi/actions";
-import styles from "@/app/page.module.css";
 
 interface Props {
   numOfProposals: unknown;
@@ -71,18 +70,12 @@ export function RenderTabs({ numOfProposals, nftBalance }: Props) {
 
   return (
     <>
-      <div className={styles.flex}>
-        <button
-          className={styles.button}
-          onClick={() => setSelectedTab("Create Proposal")}
-        >
+      <div>
+        <button onClick={() => setSelectedTab("Create Proposal")}>
           Create Proposal
         </button>
 
-        <button
-          className={styles.button}
-          onClick={() => setSelectedTab("View Proposals")}
-        >
+        <button onClick={() => setSelectedTab("View Proposals")}>
           View Proposals
         </button>
       </div>
