@@ -119,8 +119,9 @@ export default function Home() {
   async function fetchAllProposals() {
     try {
       const proposals: Proposal[] = [];
-      //@ts-ignore
-      for (let i = 0; (i < numOfProposalsInDao.data) as number; i++) {
+      const lengthOfProposals = numOfProposalsInDao.data as number;
+
+      for (let i = 0; i < lengthOfProposals; i++) {
         const proposal = await fetchProposalById(i);
         proposals.push(proposal);
       }
@@ -296,8 +297,7 @@ export default function Home() {
         <h1 className={styles.title}>Welcome to the Agents DAO</h1>
         <div className={styles.description}>Welcome Agent!</div>
         <div className={styles.description}>
-          {/*//@ts-ignore*/}
-          Your AgentsNFT Balance: {nftBalanceOfUser.data.toString()}
+          Your AgentsNFT Balance: {nftBalanceOfUser.data?.toString()}
           <br />
           {daoBalance.data && (
             <>
@@ -306,8 +306,7 @@ export default function Home() {
             </>
           )}
           <br />
-          {/*//@ts-ignore*/}
-          Total Number of Proposals: {numOfProposalsInDao.data.toString()}
+          Total Number of Proposals: {numOfProposalsInDao.data?.toString()}
         </div>
         <div className={styles.flex}>
           <button
@@ -325,7 +324,7 @@ export default function Home() {
         </div>
         {renderTabs()}
         {/*//@ts-ignore*/}
-        {address && address.toLowerCase() === daoOwner.data.toLowerCase() ? (
+        {address && address.toLowerCase() === daoOwner.data?.toLowerCase() ? (
           <div>
             {isLoading ? (
               <button className={styles.button}>Loading...</button>
