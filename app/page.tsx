@@ -218,7 +218,9 @@ export default function Home() {
           type="number"
           onChange={(e) => setNftTokenId(e.target.value)}
         />
-        <button className={styles.button2}>Create</button>
+        <button className={styles.button2} onClick={createProposal}>
+          Create
+        </button>
       </div>;
     }
   }
