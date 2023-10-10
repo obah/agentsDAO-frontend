@@ -1,7 +1,7 @@
 import { useState } from "react";
-import styles from "./page.module.css";
 import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { writeContract, waitForTransaction } from "wagmi/actions";
+import styles from "@/app/page.module.css";
 
 type Props = {
   nftBalance: unknown;

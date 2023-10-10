@@ -1,5 +1,5 @@
 import { Id, Proposal, Vote } from "@/types";
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
 
 interface Props {
   proposal: Proposal;

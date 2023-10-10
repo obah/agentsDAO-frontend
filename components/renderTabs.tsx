@@ -6,7 +6,7 @@ import CreateProposal from "@/components/createProposal";
 import { Id, Proposal } from "@/types";
 import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { readContract } from "wagmi/actions";
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
 
 interface Props {
   numOfProposals: unknown;

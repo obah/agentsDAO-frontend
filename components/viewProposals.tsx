@@ -4,7 +4,7 @@ import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { Id, Proposal, Vote } from "@/types";
 import { useState } from "react";
 import { writeContract, waitForTransaction } from "wagmi/actions";
-import styles from "./page.module.css";
+import styles from "@/app/page.module.css";
 import ProposalCard from "./proposalCard";
 
 type Props = {

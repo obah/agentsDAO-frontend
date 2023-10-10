@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./page.module.css";
 import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { writeContract, waitForTransaction } from "wagmi/actions";
+import styles from "@/app/page.module.css";
 
 function Withdraw() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
