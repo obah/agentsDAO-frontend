@@ -1,14 +1,16 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+
 export default function PagesLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <section>
-      <p>Welcome</p>
-      <nav></nav>
-
-      {children}
-    </section>
+    <div>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
   );
 }
