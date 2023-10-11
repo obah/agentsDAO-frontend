@@ -7,10 +7,10 @@ export default function PagesLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <>
       <Header />
       <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }

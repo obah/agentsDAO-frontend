@@ -12,7 +12,6 @@ import { useAccount, useBalance, useContractRead } from "wagmi";
 import { RenderTabs } from "@/components/renderTabs";
 import Withdraw from "@/components/withdraw";
 import useMounted from "@/hooks/useMounted";
-import styles from "@/app/page.module.css";
 
 export default function Page() {
   const { address, isConnected } = useAccount();
@@ -51,34 +50,32 @@ export default function Page() {
     );
 
   return (
-    <div className={styles.main}>
+    <section>
+      <h1>Welcome to the Agents DAO</h1>
+      <div>Welcome Agent!</div>
+
       <div>
-        <h1 className={styles.title}>Welcome to the Agents DAO</h1>
-        <div className={styles.description}>Welcome Agent!</div>
-
-        <div className={styles.description}>
-          Your AgentsNFT Balance: {nftBalanceOfUser.data?.toString()}
-          <br />
-          {daoBalance.data && (
-            <>
-              Treasury Balance: {formatEther(daoBalance.data.value).toString()}{" "}
-              ETH
-            </>
-          )}
-          <br />
-          Total Number of Proposals: {numOfProposalsInDao.data?.toString()}
-        </div>
-
-        <RenderTabs
-          numOfProposals={numOfProposalsInDao.data}
-          nftBalance={nftBalanceOfUser.data}
-        />
-
-        {/*//@ts-ignore*/}
-        {address && address.toLowerCase() === daoOwner.data?.toLowerCase() ? (
-          <Withdraw />
-        ) : null}
+        Your AgentsNFT Balance: {nftBalanceOfUser.data?.toString()}
+        <br />
+        {daoBalance.data && (
+          <>
+            Treasury Balance: {formatEther(daoBalance.data.value).toString()}{" "}
+            ETH
+          </>
+        )}
+        <br />
+        Total Number of Proposals: {numOfProposalsInDao.data?.toString()}
       </div>
-    </div>
+
+      <RenderTabs
+        numOfProposals={numOfProposalsInDao.data}
+        nftBalance={nftBalanceOfUser.data}
+      />
+
+      {/*//@ts-ignore*/}
+      {address && address.toLowerCase() === daoOwner.data?.toLowerCase() ? (
+        <Withdraw />
+      ) : null}
+    </section>
   );
 }
