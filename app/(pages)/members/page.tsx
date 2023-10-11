@@ -23,7 +23,7 @@ export default function Page() {
         <div>{/*image here*/}</div>
         <h3
           data-tooltip-id="my-tooltip"
-          data-tooltip-content="hey it worked"
+          data-tooltip-content="0x9ce826910f5e22A6e22A6a0418033b2677505752"
           data-tooltip-place="top"
         >
           Obaloluwa10
@@ -33,7 +33,13 @@ export default function Page() {
 
       <div>
         <h2>Private Members</h2>
-        <div>{/* render a list of addresses here...36 */}</div>
+        <div>
+          <ul>
+            {members.map((member) => (
+              <li key={member}>{member}</li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <Tooltip id="my-tooltip" />
