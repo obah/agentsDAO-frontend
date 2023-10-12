@@ -1,7 +1,11 @@
 "use client";
 
 import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import {
+  getDefaultWallets,
+  RainbowKitProvider,
+  darkTheme,
+} from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig, sepolia } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
 import React from "react";
@@ -27,7 +31,9 @@ export function RainbowKitContextProvider({
 }) {
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains}>{children}</RainbowKitProvider>
+      <RainbowKitProvider chains={chains} theme={darkTheme()}>
+        {children}
+      </RainbowKitProvider>
     </WagmiConfig>
   );
 }

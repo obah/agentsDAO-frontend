@@ -48,7 +48,7 @@ export default function Page() {
       <div>Welcome Agent!</div>
 
       {isConnected ? (
-        <>
+        <div>
           <div>
             Your AgentsNFT Balance: {nftBalanceOfUser.data?.toString()}
             <br />
@@ -71,9 +71,10 @@ export default function Page() {
           {address && address.toLowerCase() === daoOwner.data?.toLowerCase() ? (
             <Withdraw />
           ) : null}
-        </>
+        </div>
       ) : (
         <div>
+          <p>Please connect your wallet</p>
           <ConnectButton />
         </div>
       )}

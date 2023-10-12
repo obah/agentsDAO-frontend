@@ -22,7 +22,9 @@ function Header() {
   return (
     <header>
       <div>
-        <p>{/**THIS SHOULD HAVE THE LOOG STYLING */}The Agents</p>
+        <Link href="/">
+          <p>{/**THIS SHOULD HAVE THE LOOG STYLING */}The Agents</p>
+        </Link>
         <div>
           <div>hamburger</div>
           <nav>
