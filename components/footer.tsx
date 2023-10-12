@@ -2,8 +2,8 @@ function Footer() {
   return (
     <footer>
       <div>
-        <div>Logo</div>
-        <div>Other items</div>
+        <div>links here</div>
+        <p>&copy; {/**THIS SHOULD HAVE THE LOOG STYLING */}The Agents</p>
       </div>
     </footer>
   );

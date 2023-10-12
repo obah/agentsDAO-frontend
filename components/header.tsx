@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { useAccount, useBalance } from "wagmi";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 interface MenuItem {
   path: string;
@@ -6,6 +10,8 @@ interface MenuItem {
 }
 
 function Header() {
+  const { isConnected } = useAccount();
+
   const menuItems: MenuItem[] = [
     { path: "/dashboard", title: "Dashboard" },
     { path: "/portfolio", title: "Portfolio" },
@@ -16,7 +22,7 @@ function Header() {
   return (
     <header>
       <div>
-        <p>Logo here</p>
+        <p>{/**THIS SHOULD HAVE THE LOOG STYLING */}The Agents</p>
         <div>
           <div>hamburger</div>
           <nav>
@@ -28,6 +34,21 @@ function Header() {
               ))}
             </ul>
           </nav>
+        </div>
+        <div>
+          {isConnected ? (
+            <>
+              <div>
+                <ConnectButton accountStatus={"address"} />
+              </div>
+            </>
+          ) : (
+            <>
+              <div>
+                <ConnectButton />
+              </div>
+            </>
+          )}
         </div>
       </div>
     </header>

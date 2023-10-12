@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Link from "next/link";
 
 export default function Home() {
@@ -54,7 +55,10 @@ export default function Home() {
       {/* credits section */}
       <section>
         <div>
-          <h2>Made with ❤️ by your frens at {/*Put agents logo*/}</h2>
+          <h2>
+            Made with ❤️ by your frens at {/*Put agents logo style here*/}The
+            Agents
+          </h2>
           <p>
             Building RainbowKit has been an incredibly fun effort across many
             people at Rainbow and our frens at other companies. We're always
@@ -67,10 +71,7 @@ export default function Home() {
           </div>
         </div>
 
-        <footer>
-          <div>links here</div>
-          <p>&copy; The Agents</p>
-        </footer>
+        <Footer />
       </section>
     </main>
   );

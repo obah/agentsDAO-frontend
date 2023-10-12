@@ -21,6 +21,7 @@ export default function Page() {
 
       <div>
         <div>{/*image here*/}</div>
+
         <h3
           data-tooltip-id="my-tooltip"
           data-tooltip-content="0x9ce826910f5e22A6e22A6a0418033b2677505752"

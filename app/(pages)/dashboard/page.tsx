@@ -42,40 +42,41 @@ export default function Page() {
 
   if (!isMounted) return null;
 
-  if (!isConnected)
-    return (
-      <div>
-        <ConnectButton />
-      </div>
-    );
-
   return (
     <section>
       <h1>Welcome to the Agents DAO</h1>
       <div>Welcome Agent!</div>
 
-      <div>
-        Your AgentsNFT Balance: {nftBalanceOfUser.data?.toString()}
-        <br />
-        {daoBalance.data && (
-          <>
-            Treasury Balance: {formatEther(daoBalance.data.value).toString()}{" "}
-            ETH
-          </>
-        )}
-        <br />
-        Total Number of Proposals: {numOfProposalsInDao.data?.toString()}
-      </div>
+      {isConnected ? (
+        <>
+          <div>
+            Your AgentsNFT Balance: {nftBalanceOfUser.data?.toString()}
+            <br />
+            {daoBalance.data && (
+              <>
+                Treasury Balance:{" "}
+                {formatEther(daoBalance.data.value).toString()} ETH
+              </>
+            )}
+            <br />
+            Total Number of Proposals: {numOfProposalsInDao.data?.toString()}
+          </div>
 
-      <RenderTabs
-        numOfProposals={numOfProposalsInDao.data}
-        nftBalance={nftBalanceOfUser.data}
-      />
+          <RenderTabs
+            numOfProposals={numOfProposalsInDao.data}
+            nftBalance={nftBalanceOfUser.data}
+          />
 
-      {/*//@ts-ignore*/}
-      {address && address.toLowerCase() === daoOwner.data?.toLowerCase() ? (
-        <Withdraw />
-      ) : null}
+          {/*//@ts-ignore*/}
+          {address && address.toLowerCase() === daoOwner.data?.toLowerCase() ? (
+            <Withdraw />
+          ) : null}
+        </>
+      ) : (
+        <div>
+          <ConnectButton />
+        </div>
+      )}
     </section>
   );
 }
