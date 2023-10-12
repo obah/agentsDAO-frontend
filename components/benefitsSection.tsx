@@ -21,9 +21,7 @@ export default function BenefitsSection() {
         contribute to the Agents Pool. With this, you can participate in the
         Agent Asset Acquisition and profit sharing process.
       </p>
-      {/* by making proposal to
-          acquire a digital asset you are interested in, or vote in support or
-          against for assets other Agents proposed to be acquired. */}
+
       <div>
         <ul>
           {benefits.map((benefit) => (

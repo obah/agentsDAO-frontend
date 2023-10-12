@@ -4,8 +4,8 @@ export default function Page() {
       <h1>About The Agents</h1>
       <div>
         <p>
-          The LAO is a global group of Ethereum enthusiasts and experts
-          supporting the work of Ethereum builders.
+          The Agents is a global group of digital collectors and web3
+          enthusiats, all agreeing together to own and sell various assets.
         </p>
 
         <p>
@@ -17,22 +17,44 @@ export default function Page() {
         </p>
 
         <p>
-          The LAO was organized in the spirit of The DAO, as a member-directed
-          venture capital fund organized in the United States, with an aim to be
-          compliant with U.S. law. Like The DAO, The LAO allows Members to pool
-          capital, invest in projects, and share in any proceeds from the
-          investment.
+          The Agents is a built on that vision of a truly decentralised
+          autonomous body and it's use case is with asset speculation. Mainly
+          NFTs and Tokens, Agents (members of The Agents DAO) autonomously
+          participate in this process by either making individual proposals to
+          acquire/liquidate a digital asset or vote in support/against for
+          proposals made by other Agents. The only requirement to becoming an
+          Agent is to own any of The Agents NFT.
         </p>
 
         <p>
-          The LAO is organized as a legal entity (a Delaware limited liability
-          company) primarily administered via an online application (a "DApp")
-          and related smart contracts.
+          The project was built by Obaloluwa Olusoji (with NextJs, Typescript,
+          StyledComponents, Solidity and EthersJs), a frontend developer
+          passionate about Web3 and various applications of Blockchain
+          technology. You can view the source code to the DAO and the Frontend
+          in the links below. Any contribution or suggestion on improvement is
+          welcome and highly appreciated.
         </p>
 
+        <div>
+          <a
+            href="https://github.com/obah/agents-dao"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            The Agents DAO source code
+          </a>
+          <a
+            href="https://github.com/obah/agentsDAO-frontend"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            The Agents Frontend source code
+          </a>
+        </div>
+
         <p>
-          Launched in late April 2020, the LAO has backed over 130 projects
-          across the Ethereum and blockchain ecosystem.
+          Disclaimer, this is just a fictional project, all the assets owned,
+          members and other statistics are just dummy data.
         </p>
       </div>
     </section>
