@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { Container } from "./styles/Container.styled";
 
 export default function BenefitsSection() {
   const benefits = [
@@ -13,7 +16,7 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section>
+    <Container $bg="red">
       <h2>The Agents 🤝 Everyone</h2>
       <p>
         The Agents DAO was made with almost no barrier to entry for everyone on
@@ -31,6 +34,6 @@ export default function BenefitsSection() {
       </div>
 
       <Link href="/dashboard">Enter</Link>
-    </section>
+    </Container>
   );
 }
