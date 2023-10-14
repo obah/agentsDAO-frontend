@@ -8,10 +8,6 @@ interface Props {
 
 export const StyledSection = styled.section<Props>`
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 3.7rem 2rem;
 
   background: ${({ $bg }) =>
     $bg === "primary"
@@ -30,10 +26,6 @@ export const StyledSection = styled.section<Props>`
     margin: 1rem 0 0;
   }
 
-  h1 ~ p {
-    margin: 0 0 3rem;
-  }
-
   h2 {
     font-size: 1.85rem;
     font-weight: 700;
@@ -45,6 +37,10 @@ export const StyledSection = styled.section<Props>`
     font-weight: 600;
   }
 
+  h1 ~ p {
+    margin: 0 0 3rem;
+  }
+
   ul > li {
     list-style: none;
 
@@ -54,6 +50,34 @@ export const StyledSection = styled.section<Props>`
     padding-left: 1rem;
     align-items: center;
     font-size: 1.1rem;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 3.25rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 2rem 0 0;
+    }
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.laptop}) {
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.desktop}) {
   }
 `;
 
@@ -71,6 +95,13 @@ export const StyledDiv = styled.div`
       font-size: 2.5rem;
     }
   }
+
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    margin: 2rem 0;
+  }
 `;
 
 export const Flex = styled.div`
@@ -78,6 +109,12 @@ export const Flex = styled.div`
   flex: 1;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0 0;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -88,5 +125,17 @@ export const ImageWrapper = styled.div`
     max-width: 100%;
     /* height: 100%; */
     object-fit: cover;
+  }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3.7rem 2rem;
+
+  @media screen and (min-width: ${theme.breakpoints.laptop}) {
+    max-width: 1024px;
+    margin: 0 auto;
   }
 `;

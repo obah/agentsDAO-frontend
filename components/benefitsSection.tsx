@@ -1,6 +1,6 @@
 "use client";
 
-import { StyledSection } from "./styles/Section.styled";
+import { Container, StyledSection } from "./styles/Section.styled";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { StyledLink } from "./styles/Button.styled";
 
@@ -18,30 +18,32 @@ export default function BenefitsSection() {
 
   return (
     <StyledSection $bg="primary">
-      <h2>Agents 🤝 Everyone</h2>
-      <p>
-        The Agents DAO was made with almost no barrier to entry for everyone on
-        the web. All you need is a crypto wallet, an Agents NFT and funds to
-        contribute to the Agents Pool. With this, you can participate in the
-        Agent Asset Acquisition and profit sharing process.
-      </p>
+      <Container>
+        <h2>Agents 🤝 Everyone</h2>
+        <p>
+          The Agents DAO was made with almost no barrier to entry for everyone
+          on the web. All you need is a crypto wallet, an Agents NFT and funds
+          to contribute to the Agents Pool. With this, you can participate in
+          the Agent Asset Acquisition and profit sharing process.
+        </p>
 
-      <div>
-        <ul>
-          {benefits.map((benefit) => (
-            <li key={benefit.id}>
-              <span>
-                <BsFillPatchCheckFill />
-              </span>
-              <div>{benefit.text}</div>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div>
+          <ul>
+            {benefits.map((benefit) => (
+              <li key={benefit.id}>
+                <span>
+                  <BsFillPatchCheckFill />
+                </span>
+                <div>{benefit.text}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      <StyledLink $type="secondary" href="/dashboard">
-        Enter
-      </StyledLink>
+        <StyledLink $type="secondary" href="/dashboard">
+          Enter
+        </StyledLink>
+      </Container>
     </StyledSection>
   );
 }

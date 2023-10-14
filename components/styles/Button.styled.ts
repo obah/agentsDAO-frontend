@@ -29,6 +29,12 @@ export const StyledButton = styled.a<Props>`
   &:hover {
     transform: scale(1.3, 1.1);
   }
+
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    font-size: 1.4rem;
+    padding: 0.8rem 0;
+    width: 9rem;
+  }
 `;
 
 export const StyledLink = styled(Link)<Props>`
@@ -52,5 +58,12 @@ export const StyledLink = styled(Link)<Props>`
 
   &:hover {
     transform: scale(1.3, 1.1);
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    font-size: 1.4rem;
+    padding: 0.8rem 0;
+    width: 9rem;
+    margin: 0 auto;
   }
 `;

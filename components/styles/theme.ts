@@ -6,6 +6,11 @@ const theme: DefaultTheme = {
     secondary: "#d8531e",
     default: "#fffeff",
   },
+  breakpoints: {
+    tablet: "768px",
+    laptop: "1024px",
+    desktop: "1440px",
+  },
 };
 
 export { theme };

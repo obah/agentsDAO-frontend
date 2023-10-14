@@ -9,5 +9,10 @@ declare module "styled-components" {
       secondary: string;
       default: string;
     };
+    breakpoints: {
+      tablet: string;
+      laptop: string;
+      desktop: string;
+    };
   }
 }
