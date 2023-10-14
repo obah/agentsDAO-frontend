@@ -1,6 +1,7 @@
 "use client";
 
-import { StyledSection } from "./styles/Section.styled";
+import { StyledSection, Flex } from "./styles/Section.styled";
+import { StyledButton } from "./styles/Button.styled";
 
 export default function CreditsSection() {
   return (
@@ -13,16 +14,20 @@ export default function CreditsSection() {
           development, smart contract development skills and make my projects
           better, so please let me know how I can improve.
         </p>
-        <div>
-          <a href="mailto:hello@obaloluwa.com">Email</a>
-          <a
+        <Flex>
+          <StyledButton $type="primary" href="mailto:hello@obaloluwa.com">
+            Email
+          </StyledButton>
+
+          <StyledButton
+            $type="secondary"
             href="https://github.com/obah/agentsDAO-frontend"
             target="_blank"
             rel="noopener noreferrer"
           >
             Github
-          </a>
-        </div>
+          </StyledButton>
+        </Flex>
       </div>
     </StyledSection>
   );

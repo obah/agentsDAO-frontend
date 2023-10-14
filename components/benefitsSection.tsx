@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { StyledSection } from "./styles/Section.styled";
+import { BsFillPatchCheckFill } from "react-icons/bs";
+import { StyledLink } from "./styles/Button.styled";
 
 export default function BenefitsSection() {
   const benefits = [
@@ -17,7 +18,7 @@ export default function BenefitsSection() {
 
   return (
     <StyledSection $bg="primary">
-      <h2>The Agents 🤝 Everyone</h2>
+      <h2>Agents 🤝 Everyone</h2>
       <p>
         The Agents DAO was made with almost no barrier to entry for everyone on
         the web. All you need is a crypto wallet, an Agents NFT and funds to
@@ -28,12 +29,19 @@ export default function BenefitsSection() {
       <div>
         <ul>
           {benefits.map((benefit) => (
-            <li key={benefit.id}>{benefit.text}</li>
+            <li key={benefit.id}>
+              <span>
+                <BsFillPatchCheckFill />
+              </span>
+              <div>{benefit.text}</div>
+            </li>
           ))}
         </ul>
       </div>
 
-      <Link href="/dashboard">Enter</Link>
+      <StyledLink $type="secondary" href="/dashboard">
+        Enter
+      </StyledLink>
     </StyledSection>
   );
 }
