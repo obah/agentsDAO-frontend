@@ -1,6 +1,10 @@
+"use client";
+
+import { StyledSection } from "./styles/Section.styled";
+
 export default function CreditsSection() {
   return (
-    <section>
+    <StyledSection $bg="default">
       <div>
         <h2>Made with ❤️ by {/*Put agents logo style here*/}Obaloluwa</h2>
         <p>
@@ -20,6 +24,6 @@ export default function CreditsSection() {
           </a>
         </div>
       </div>
-    </section>
+    </StyledSection>
   );
 }

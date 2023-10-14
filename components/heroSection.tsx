@@ -1,11 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { StyledSection } from "./styles/Section.styled";
 
 export default function HeroSection() {
   return (
-    <section>
+    <StyledSection $bg="primary" $align="center">
       <div>
         <h1>The Agents</h1>
-        <h2>An automonus community of digital collectors</h2>
+        <h2>The community of all digital collectors</h2>
         <p>Open to everyone. Built to collect every digital asset</p>
         <Link href="/dashboard">Enter</Link>
 
@@ -41,6 +44,6 @@ export default function HeroSection() {
           {/*mini icons list here of nft markets, crypto assets and nfts that have logo eg manaland metaverse nfts*/}
         </div>
       </div>
-    </section>
+    </StyledSection>
   );
 }
