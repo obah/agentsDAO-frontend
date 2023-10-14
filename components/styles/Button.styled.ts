@@ -24,15 +24,14 @@ export const StyledButton = styled.a<Props>`
         : `${theme.colors.secondary}, #91320c`}
   );
   color: ${theme.colors.default};
-  transition: transform ease-out 400ms;
+  transition: transform ease-out 200ms;
 
   &:hover {
-    transform: scale(1.3, 1.1);
+    transform: scale(1.1, 1.05);
   }
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
     font-size: 1.4rem;
-    padding: 0.8rem 0;
     width: 9rem;
   }
 `;
@@ -54,15 +53,14 @@ export const StyledLink = styled(Link)<Props>`
         : `${theme.colors.secondary}, #91320c`}
   );
   color: ${theme.colors.default};
-  transition: transform ease-out 400ms;
+  transition: transform ease-out 200ms;
 
   &:hover {
-    transform: scale(1.3, 1.1);
+    transform: scale(1.1, 1.05);
   }
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
     font-size: 1.4rem;
-    padding: 0.8rem 0;
     width: 9rem;
     margin: 0 auto;
   }
