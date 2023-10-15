@@ -8,10 +8,13 @@ import {
   Container,
   Flex,
   Connector,
+  MenuBtn,
+  StyledNav,
 } from "@/components/styles/Header.styled";
 import { Logo } from "./styles/Logo.styled";
 import { StyledLink } from "./styles/Button.styled";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface MenuItem {
   path: string;
@@ -27,6 +30,12 @@ function Header({ mini }: Props) {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   const menuItems: MenuItem[] = [
     { path: "/dashboard", title: "Dashboard" },
     { path: "/portfolio", title: "Portfolio" },
@@ -35,6 +44,8 @@ function Header({ mini }: Props) {
   ];
 
   const handleMenu = () => setIsOpen(!isOpen);
+
+  const openStyle = isOpen ? " open" : "";
 
   return (
     <StyledHeader>
@@ -51,16 +62,26 @@ function Header({ mini }: Props) {
         ) : (
           <Flex>
             <div>
-              <button onClick={handleMenu}>hamburger</button>
-              <nav>
-                <ul>
+              <MenuBtn>
+                <span onClick={handleMenu} className={openStyle}></span>
+              </MenuBtn>
+
+              <StyledNav className={openStyle}>
+                <ul className={openStyle}>
                   {menuItems.map((item) => (
                     <li key={item.title}>
-                      <Link href={item.path}>{item.title}</Link>
+                      <Link
+                        href={item.path}
+                        className={
+                          pathname.includes(item.path) ? " active" : ""
+                        }
+                      >
+                        {item.title}
+                      </Link>
                     </li>
                   ))}
                 </ul>
-              </nav>
+              </StyledNav>
             </div>
             <Connector>
               {isConnected ? (
