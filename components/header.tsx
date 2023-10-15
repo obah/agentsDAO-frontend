@@ -51,7 +51,7 @@ function Header({ mini }: Props) {
     <StyledHeader>
       <Container>
         <Link href="/">
-          <Logo>The Agents</Logo>
+          <Logo $type="slant">The Agents</Logo>
         </Link>
         {mini ? (
           <div>

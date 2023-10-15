@@ -10,7 +10,7 @@ function Footer() {
     <StyledFooter>
       <Container>
         <Link href="/">
-          <Logo> The Agents</Logo>
+          <Logo $type="straight"> The Agents</Logo>
         </Link>
       </Container>
     </StyledFooter>
