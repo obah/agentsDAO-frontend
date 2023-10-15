@@ -9,11 +9,8 @@ function Footer() {
   return (
     <StyledFooter>
       <Container>
-        <div>links here</div>
         <Link href="/">
-          <Logo>
-            &copy; {/**THIS SHOULD HAVE THE LOOG STYLING */}The Agents
-          </Logo>
+          <Logo> The Agents</Logo>
         </Link>
       </Container>
     </StyledFooter>

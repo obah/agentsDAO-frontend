@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { writeContract, waitForTransaction } from "wagmi/actions";
 import { StyledButton2 } from "./styles/Button.styled";
+import { Loader } from "./styles/Loader.styled";
 
 type Props = {
   nftBalance: unknown;
@@ -34,7 +35,7 @@ export default function CreateProposal({ nftBalance }: Props) {
   return (
     <>
       {isLoading ? (
-        <div>Loading... Waiting for transaction...</div>
+        <Loader></Loader>
       ) : nftBalance === 0 ? (
         <div>
           You do not own any Agents NFTs. <br />

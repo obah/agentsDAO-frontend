@@ -5,6 +5,7 @@ import { Id, Proposal, Vote } from "@/types";
 import { useState } from "react";
 import { writeContract, waitForTransaction } from "wagmi/actions";
 import ProposalCard from "./proposalCard";
+import { Loader } from "./styles/Loader.styled";
 
 type Props = {
   proposals: Proposal[];
@@ -52,9 +53,7 @@ export default function ViewProposals({ proposals }: Props) {
   return (
     <>
       {isLoading ? (
-        <div>
-          Loading... Waiting for transaction...{/*replace with a loader*/}
-        </div>
+        <Loader></Loader>
       ) : proposals.length === 0 ? (
         <p>No proposals have been created yet</p>
       ) : (
