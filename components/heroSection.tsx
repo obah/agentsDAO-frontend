@@ -4,7 +4,7 @@ import {
   StyledSection,
   StyledDiv,
   ImageWrapper,
-  Container,
+  SectionContainer,
 } from "./styles/Section.styled";
 import { StyledLink } from "./styles/Button.styled";
 import NFT from "@/assets/images/NFT1.webp";
@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <StyledSection $bg="primary" $align="center">
-      <Container>
+      <SectionContainer>
         <div>
           <h1>The Agents</h1>
           <h2>The community for all digital collectors</h2>
@@ -54,7 +54,7 @@ export default function HeroSection() {
             {/*mini icons list here of nft markets, crypto assets and nfts that have logo eg manaland metaverse nfts*/}
           </div>
         </div>
-      </Container>
+      </SectionContainer>
     </StyledSection>
   );
 }

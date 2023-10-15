@@ -5,6 +5,7 @@ import Link from "next/link";
 interface Props {
   $type: "primary" | "secondary";
   $align?: boolean;
+  $box?: boolean;
 }
 
 export const StyledButton = styled.a<Props>`
@@ -44,7 +45,7 @@ export const StyledLink = styled(Link)<Props>`
   width: 8rem;
   margin: 0 ${({ $align }) => ($align ? " auto " : " 0 ")};
   padding: 0.6rem 0;
-  border-radius: 100vw;
+  border-radius: ${({ $box }) => ($box ? "10px" : "100vw")};
   background-image: linear-gradient(
     to right,
     ${({ $type }) =>

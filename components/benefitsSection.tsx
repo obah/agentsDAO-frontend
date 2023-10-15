@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, StyledSection } from "./styles/Section.styled";
+import { SectionContainer, StyledSection } from "./styles/Section.styled";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { StyledLink } from "./styles/Button.styled";
 
@@ -18,7 +18,7 @@ export default function BenefitsSection() {
 
   return (
     <StyledSection $bg="primary">
-      <Container>
+      <SectionContainer>
         <h2>Agents 🤝 Everyone</h2>
         <p>
           The Agents DAO was made with almost no barrier to entry for everyone
@@ -43,7 +43,7 @@ export default function BenefitsSection() {
         <StyledLink $type="secondary" href="/dashboard">
           Enter
         </StyledLink>
-      </Container>
+      </SectionContainer>
     </StyledSection>
   );
 }

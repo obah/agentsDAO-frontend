@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "./theme";
 
 interface Props {
-  $bg: string;
+  $bg: "primary" | "secondary" | "default";
   $align?: string;
 }
 
@@ -73,12 +73,15 @@ export const StyledSection = styled.section<Props>`
       margin: 2rem 0 0;
     }
   }
+`;
 
-  @media screen and (min-width: ${theme.breakpoints.laptop}) {
-  }
-
-  @media screen and (min-width: ${theme.breakpoints.desktop}) {
-  }
+export const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3.7rem 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
 `;
 
 export const StyledDiv = styled.div`
@@ -123,19 +126,6 @@ export const ImageWrapper = styled.div`
 
   img {
     max-width: 100%;
-    /* height: 100%; */
     object-fit: cover;
-  }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 3.7rem 2rem;
-
-  @media screen and (min-width: ${theme.breakpoints.laptop}) {
-    max-width: 1024px;
-    margin: 0 auto;
   }
 `;

@@ -1,12 +1,12 @@
 "use client";
 
-import { StyledSection, Flex, Container } from "./styles/Section.styled";
+import { StyledSection, Flex, SectionContainer } from "./styles/Section.styled";
 import { StyledButton } from "./styles/Button.styled";
 
 export default function CreditsSection() {
   return (
     <StyledSection $bg="default">
-      <Container>
+      <SectionContainer>
         <h2>Made with ❤️ by {/*Put agents logo style here*/}Obaloluwa</h2>
         <p>
           Building The Agents DAO has been an incredibly fun effort and learning
@@ -28,7 +28,7 @@ export default function CreditsSection() {
             Github
           </StyledButton>
         </Flex>
-      </Container>
+      </SectionContainer>
     </StyledSection>
   );
 }
