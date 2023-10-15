@@ -6,6 +6,7 @@ interface Props {
   $type: "primary" | "secondary";
   $align?: boolean;
   $box?: boolean;
+  $size?: string;
 }
 
 export const StyledButton = styled.a<Props>`
@@ -13,7 +14,7 @@ export const StyledButton = styled.a<Props>`
   place-items: center;
   font-size: 1.2rem;
   font-weight: 700;
-  width: 8rem;
+  width: ${({ $size }) => ($size === "big" ? "12rem" : "8rem")};
   margin: 2rem 0;
   padding: 0.6rem 0;
   border-radius: 100vw;
@@ -33,7 +34,7 @@ export const StyledButton = styled.a<Props>`
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
     font-size: 1.4rem;
-    width: 9rem;
+    width: ${({ $size }) => ($size === "big" ? "14rem" : "9rem")};
   }
 `;
 
@@ -42,7 +43,7 @@ export const StyledLink = styled(Link)<Props>`
   place-items: center;
   font-size: 1.2rem;
   font-weight: 700;
-  width: 8rem;
+  width: ${({ $size }) => ($size === "big" ? "12rem" : "8rem")};
   margin: 0 ${({ $align }) => ($align ? " auto " : " 0 ")};
   padding: 0.6rem 0;
   border-radius: ${({ $box }) => ($box ? "10px" : "100vw")};
@@ -62,7 +63,7 @@ export const StyledLink = styled(Link)<Props>`
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
     font-size: 1.4rem;
-    width: 9rem;
+    width: ${({ $size }) => ($size === "big" ? "14rem" : "9rem")};
     margin: 0 auto;
   }
 `;
