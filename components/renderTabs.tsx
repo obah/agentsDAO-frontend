@@ -6,6 +6,7 @@ import CreateProposal from "@/components/createProposal";
 import { Id, Proposal } from "@/types";
 import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { readContract } from "wagmi/actions";
+import { StyledButton2 } from "./styles/Button.styled";
 
 interface Props {
   numOfProposals: unknown;
@@ -13,14 +14,12 @@ interface Props {
 }
 
 export function RenderTabs({ numOfProposals, nftBalance }: Props) {
-  const [selectedTab, setSelectedTab] = useState<string>("");
   const [proposals, setProposals] = useState<Proposal[]>([]);
+  const [createProposal, setCreateProposal] = useState<boolean>(false);
 
   useEffect(() => {
-    if (selectedTab === "View Proposals") {
-      fetchAllProposals();
-    }
-  }, [selectedTab]);
+    fetchAllProposals();
+  }, []);
 
   async function fetchProposalById(id: Id) {
     try {
@@ -71,20 +70,17 @@ export function RenderTabs({ numOfProposals, nftBalance }: Props) {
   return (
     <>
       <div>
-        <button onClick={() => setSelectedTab("Create Proposal")}>
-          Create Proposal
-        </button>
-
-        <button onClick={() => setSelectedTab("View Proposals")}>
-          View Proposals
-        </button>
+        <StyledButton2
+          $type="primary"
+          onClick={() => setCreateProposal(!createProposal)}
+        >
+          {createProposal ? "Cancel" : "Create Proposal"}
+        </StyledButton2>
       </div>
 
-      {selectedTab === "Create Proposal" ? (
-        <CreateProposal nftBalance={nftBalance} />
-      ) : selectedTab === "View Proposals" ? (
-        <ViewProposals proposals={proposals} />
-      ) : null}
+      <ViewProposals proposals={proposals} />
+
+      {createProposal && <CreateProposal nftBalance={nftBalance} />}
     </>
   );
 }

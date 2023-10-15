@@ -1,6 +1,10 @@
+"use client";
+
+import { StyledSection } from "@/components/styles/App.styled";
+
 export default function Page() {
   return (
-    <section>
+    <StyledSection>
       <h1>About The Agents</h1>
       <div>
         <p>
@@ -57,6 +61,6 @@ export default function Page() {
           members and other statistics are just dummy data.
         </p>
       </div>
-    </section>
+    </StyledSection>
   );
 }

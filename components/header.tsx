@@ -7,6 +7,7 @@ import {
   StyledHeader,
   Container,
   Flex,
+  Connector,
 } from "@/components/styles/Header.styled";
 import { Logo } from "./styles/Logo.styled";
 import { StyledLink } from "./styles/Button.styled";
@@ -61,21 +62,17 @@ function Header({ mini }: Props) {
                 </ul>
               </nav>
             </div>
-            <div>
+            <Connector>
               {isConnected ? (
-                <>
-                  <div>
-                    <ConnectButton accountStatus={"address"} />
-                  </div>
-                </>
+                <div>
+                  <ConnectButton accountStatus={"address"} />
+                </div>
               ) : (
-                <>
-                  <div>
-                    <ConnectButton />
-                  </div>
-                </>
+                <div>
+                  <ConnectButton />
+                </div>
               )}
-            </div>
+            </Connector>
           </Flex>
         )}
       </Container>

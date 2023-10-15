@@ -4,8 +4,14 @@ import { theme } from "./theme";
 export const StyledHeader = styled.header`
   background-color: transparent;
 
+  a {
+    color: ${theme.colors.default};
+  }
+
   nav {
-    transform: translateX(-100vw);
+    transform: translateY(-100vw);
+    visibility: hidden;
+    position: fixed;
   }
 
   ul {
@@ -22,6 +28,8 @@ export const StyledHeader = styled.header`
 
     nav {
       transform: none;
+      visibility: visible;
+      position: static;
     }
 
     ul {
@@ -31,18 +39,32 @@ export const StyledHeader = styled.header`
 `;
 
 export const Container = styled.div`
-  max-width: 1440px;
+  max-width: 1650px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 1rem;
+
+  @media screen and (min-width: ${theme.breakpoints.laptop}) {
+    padding: 2rem 1rem;
+  }
 `;
 
 export const Flex = styled.div`
-  width: 65%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @media screen and (min-width: ${theme.breakpoints.laptop}) {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+
+export const Connector = styled.div`
+  display: none;
+
+  @media screen and (min-width: ${theme.breakpoints.laptop}) {
+    display: block;
+  }
 `;

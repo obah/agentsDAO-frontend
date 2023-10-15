@@ -52,9 +52,11 @@ export default function ViewProposals({ proposals }: Props) {
   return (
     <>
       {isLoading ? (
-        <div>Loading... Waiting for transaction...</div>
+        <div>
+          Loading... Waiting for transaction...{/*replace with a loader*/}
+        </div>
       ) : proposals.length === 0 ? (
-        <div>No proposals have been created yet</div>
+        <p>No proposals have been created yet</p>
       ) : (
         <div>
           {proposals.map((p) => (

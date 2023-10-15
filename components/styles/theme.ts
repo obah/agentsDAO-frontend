@@ -4,7 +4,7 @@ const theme: DefaultTheme = {
   colors: {
     primary: "#050a12",
     secondary: "#d8531e",
-    default: "#fffeff",
+    default: "#dedbdb",
   },
   breakpoints: {
     tablet: "768px",

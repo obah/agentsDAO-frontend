@@ -1,5 +1,8 @@
+"use client";
+
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { StyledMain } from "@/components/styles/App.styled";
 
 export default function PagesLayout({
   children,
@@ -9,7 +12,7 @@ export default function PagesLayout({
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <StyledMain>{children}</StyledMain>
       <Footer />
     </>
   );

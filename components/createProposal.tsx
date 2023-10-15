@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AgentsDAOAddress, AgentsDAOABI } from "@/lib/constants";
 import { writeContract, waitForTransaction } from "wagmi/actions";
+import { StyledButton2 } from "./styles/Button.styled";
 
 type Props = {
   nftBalance: unknown;
@@ -47,7 +48,9 @@ export default function CreateProposal({ nftBalance }: Props) {
             type="number"
             onChange={(e) => setNftTokenId(e.target.value)}
           />
-          <button onClick={createProposal}>Create</button>
+          <StyledButton2 $type="secondary" onClick={createProposal}>
+            Create
+          </StyledButton2>
         </div>
       )}
     </>

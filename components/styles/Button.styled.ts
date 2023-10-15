@@ -66,3 +66,34 @@ export const StyledLink = styled(Link)<Props>`
     margin: 0 auto;
   }
 `;
+
+export const StyledButton2 = styled.button<Props>`
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 12rem;
+  margin: 2rem 0;
+  padding: 0.6rem 0;
+  border-radius: 100vw;
+  border: 0;
+  background-image: linear-gradient(
+    to right,
+    ${({ $type }) =>
+      $type === "primary"
+        ? `${theme.colors.primary}, #102a54`
+        : `${theme.colors.secondary}, #91320c`}
+  );
+  color: ${theme.colors.default};
+  transition: transform ease-out 200ms;
+
+  &:hover {
+    transform: scale(1.1, 1.05);
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    font-size: 1.4rem;
+    width: 14rem;
+  }
+`;

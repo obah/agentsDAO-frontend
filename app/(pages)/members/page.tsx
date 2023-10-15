@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Tooltip } from "react-tooltip";
 import members from "@/lib/memberAddress.json";
+import { StyledSection } from "@/components/styles/App.styled";
 
 export default function Page() {
   const [memberSize, setMemberSize] = useState<number>(0);
@@ -13,7 +14,7 @@ export default function Page() {
   }, []);
 
   return (
-    <section>
+    <StyledSection>
       <h1>Meet The Agents</h1>
       <p>
         Current Agents: <span>{memberSize}</span>
@@ -44,6 +45,6 @@ export default function Page() {
       </div>
 
       <Tooltip id="my-tooltip" />
-    </section>
+    </StyledSection>
   );
 }
