@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { RainbowKitContextProvider } from "@/context/rainbowKitContext";
+import StyledComponentsRegistry from "./registry";
 
 const sfRounded = localFont({
   src: [
@@ -66,7 +67,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={sfRounded.className}>
-        <RainbowKitContextProvider>{children}</RainbowKitContextProvider>
+        <RainbowKitContextProvider>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </RainbowKitContextProvider>
       </body>
     </html>
   );
