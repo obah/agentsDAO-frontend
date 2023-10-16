@@ -8,6 +8,8 @@ import {
 } from "./styles/Section.styled";
 import { StyledLink } from "./styles/Button.styled";
 import NFT from "@/assets/images/NFT1.webp";
+import NFT2 from "@/assets/images/NFT8.png";
+import NFT3 from "@/assets/images/NFT10.png";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -26,6 +28,8 @@ export default function HeroSection() {
           {/* <div>Image hereput the agents image and 2 popular nfts here</div> */}
           <ImageWrapper>
             <Image src={NFT} alt="agents NFT" />
+            <Image src={NFT2} alt="agents NFT" width={300} />
+            <Image src={NFT3} alt="agents NFT" width={400} />
           </ImageWrapper>
 
           <StyledDiv>

@@ -121,11 +121,47 @@ export const Flex = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  position: relative;
   height: 500px;
   margin: 4rem auto;
 
   img {
+    position: absolute;
     max-width: 100%;
     object-fit: cover;
+    border-radius: 15px;
+  }
+
+  img:nth-child(1) {
+    left: 0;
+  }
+
+  img:nth-child(2) {
+    display: none;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  img:nth-child(3) {
+    display: none;
+    right: 0;
+    bottom: 0;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    img:nth-child(2) {
+      display: block;
+      right: 0;
+    }
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.laptop}) {
+    img:nth-child(2) {
+      right: 30%;
+    }
+
+    img:nth-child(3) {
+      display: block;
+    }
   }
 `;
