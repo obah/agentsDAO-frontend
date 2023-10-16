@@ -111,7 +111,6 @@ export const StyledNav = styled.nav`
     text-transform: uppercase;
     padding: 2rem 0;
     transform: translateX(200%);
-    transition: transform 300ms ease-in;
     list-style: none;
 
     &.open {
@@ -122,7 +121,6 @@ export const StyledNav = styled.nav`
       width: 100%;
       padding: 1rem 0;
       text-align: center;
-      transition: color 300ms ease-in;
 
       a {
         font-size: 1.1rem;
@@ -131,14 +129,22 @@ export const StyledNav = styled.nav`
           color: ${theme.colors.secondary};
         }
 
-        &:hover {
-          color: ${theme.colors.secondary};
-        }
-
         &:active {
           color: ${theme.colors.default};
         }
       }
+    }
+
+    & li a {
+      transition: all 300ms ease-in;
+    }
+
+    &:hover li a {
+      opacity: 0.5;
+    }
+
+    & li a:hover {
+      opacity: 1;
     }
   }
 

@@ -4,6 +4,7 @@ import { theme } from "./theme";
 interface Props {
   $bg: "primary" | "secondary" | "default";
   $align?: string;
+  $full?: boolean;
 }
 
 export const StyledSection = styled.section<Props>`
@@ -69,7 +70,7 @@ export const StyledSection = styled.section<Props>`
 
     ul {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: ${({ $full }) => ($full ? "1fr" : "1fr 1fr")};
       margin: 2rem 0 0;
     }
   }
