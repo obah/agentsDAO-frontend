@@ -8,11 +8,11 @@ import NFT3 from "@/assets/images/NFT5.webp";
 import NFT4 from "@/assets/images/NFT8.png";
 import Image from "next/image";
 
-let pos = document.documentElement;
-pos.addEventListener("mouseover", (e) => {
-  pos.style.setProperty("--x", e.clientX + "px");
-  pos.style.setProperty("--y", e.clientY + "px");
-});
+// let pos = document.documentElement;
+// pos.addEventListener("mouseover", (e) => {
+//   pos.style.setProperty("--x", e.clientX + "px");
+//   pos.style.setProperty("--y", e.clientY + "px");
+// });
 
 export default function ShowcaseSection() {
   return (
