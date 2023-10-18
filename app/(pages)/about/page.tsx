@@ -3,6 +3,7 @@
 import { StyledSection, Title, Grid } from "@/components/styles/App.styled";
 import { StyledButton } from "@/components/styles/Button.styled";
 import { StyledDiv } from "@/components/styles/Dashboard.styled";
+import { Flex } from "@/components/styles/About.styled";
 
 export default function Page() {
   return (
@@ -11,7 +12,7 @@ export default function Page() {
         <h1>About The Agents</h1>
       </Title>
       <Grid>
-        <StyledDiv $type="unconnected">
+        <StyledDiv $type="connected">
           <p>
             The Agents is a global group of digital collectors and web3
             enthusiats, all agreeing together to own and sell various assets.
@@ -45,7 +46,7 @@ export default function Page() {
             welcome and highly appreciated.
           </p>
 
-          <div>
+          <Flex>
             <StyledButton
               $type="primary"
               $size="big"
@@ -65,7 +66,7 @@ export default function Page() {
             >
               Frontend repo
             </StyledButton>
-          </div>
+          </Flex>
 
           <p>
             Disclaimer, this is just a fictional project, all the assets owned,
