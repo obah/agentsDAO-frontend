@@ -1,55 +1,20 @@
 "use client";
 
 import { StyledSection, Title } from "@/components/styles/App.styled";
+import { StyledButton } from "@/components/styles/Button.styled";
+import Image from "next/image";
+import { NftCard } from "@/components/styles/Portfolio.styled";
+import NftData from "@/lib/nftData.json";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectCoverflow } from "swiper/modules";
+import { Navigation, EffectCoverflow, Keyboard } from "swiper/modules";
+import "@/components/styles/styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-coverflow";
-import NFT1 from "@/assets/images/NFT1.webp";
-import NFT2 from "@/assets/images/NFT2.webp";
-import NFT3 from "@/assets/images/NFT5.webp";
-import NFT4 from "@/assets/images/NFT8.png";
-import NFT5 from "@/assets/images/NFT3.webp";
-import NFT6 from "@/assets/images/NFT4.webp";
-import Image from "next/image";
-import { NftCard } from "@/components/styles/Portfolio.styled";
 
 export default function Page() {
-  const NftData = [
-    {
-      image: NFT1,
-      name: "System Crash",
-      link: "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/94097795555596813934356543551066882305933048127717855204369613979654174025487",
-    },
-    {
-      image: NFT2,
-      name: "ATROPOLIS",
-      link: "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/94097795555596813934356543551066882305933048127717855204369613981853197281039",
-    },
-    {
-      image: NFT3,
-      name: "Everything Water",
-      link: "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/94097795555596813934356543551066882305933048127717855204369613925778104261964",
-    },
-    {
-      image: NFT4,
-      name: "BoredApeYachtClub",
-      link: "https://opensea.io/assets/ethereum/0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d/7808",
-    },
-    {
-      image: NFT5,
-      name: "Cosmic Jelly",
-      link: "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/94097795555596813934356543551066882305933048127717855204369613860906918217880",
-    },
-    {
-      image: NFT6,
-      name: "Dead Botz",
-      link: "https://opensea.io/assets/matic/0x2953399124f0cbb46d2cbacd8a89cf0599974963/94097795555596813934356543551066882305933048127717855204369613989549778667972",
-    },
-  ];
-
   return (
     <StyledSection>
       <Title>
@@ -57,28 +22,35 @@ export default function Page() {
       </Title>
 
       <Swiper
-        spaceBetween={1000}
+        // spaceBetween={100}
         navigation
+        loop={true}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
-        speed={1000}
+        speed={500}
         initialSlide={1}
+        keyboard={{ enabled: true }}
         coverflowEffect={{
-          rotate: 50,
+          rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 1,
-          slideShadows: true,
+          modifier: 1.5,
+          slideShadows: false,
         }}
-        modules={[Navigation, EffectCoverflow]}
+        modules={[Navigation, EffectCoverflow, Keyboard]}
       >
         {NftData.map((item) => (
           <SwiperSlide key={item.name}>
             <NftCard>
-              <Image src={item.image} alt="nft" width={400} />
-              <a href={item.link}>{item.name}</a>
+              <Image src={item.image} alt="nft" width={400} height={400} />
+              <div>
+                <p>{item.name}</p>
+                <StyledButton href={item.link} $type="primary">
+                  View
+                </StyledButton>
+              </div>
             </NftCard>
           </SwiperSlide>
         ))}

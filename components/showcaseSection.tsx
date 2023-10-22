@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { AnimatedPorfolio } from "./styles/Portfolio.styled";
 import { StyledSection, SectionContainer } from "./styles/Section.styled";
 import NFT1 from "@/assets/images/NFT1.webp";
@@ -17,24 +16,8 @@ const nftData = [
 ];
 
 export default function ShowcaseSection() {
-  // useEffect(() => {
-  //   let pos = document.documentElement;
-  //   pos.addEventListener("mousemove", handleMouseMove);
-
-  //   function handleMouseMove(e: MouseEvent) {
-  //     pos.style.setProperty("--x", e.clientX + "px");
-  //     pos.style.setProperty("--y", e.clientY + "px");
-  //   }
-  // }, []);
-
-  function handleMouseMove(e: React.MouseEvent<HTMLElement, MouseEvent>) {
-    let pos = document.documentElement;
-    pos.style.setProperty("--x", e.clientX + "px");
-    pos.style.setProperty("--y", e.clientY + "px");
-  }
-
   return (
-    <StyledSection $bg="secondary" $full onMouseMove={handleMouseMove}>
+    <StyledSection $bg="secondary" $full>
       <SectionContainer>
         <h2>Sneak Peak Of Our Portfolio</h2>
 

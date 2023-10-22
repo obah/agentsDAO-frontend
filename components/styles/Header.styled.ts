@@ -136,14 +136,14 @@ export const StyledNav = styled.nav`
     }
 
     & li a {
-      transition: all 300ms ease-in;
+      transition: all 200ms ease-in;
     }
 
     &:hover li a {
       opacity: 0.5;
     }
 
-    & li a:hover {
+    & li:hover a {
       opacity: 1;
     }
   }
