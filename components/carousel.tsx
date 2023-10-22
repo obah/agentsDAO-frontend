@@ -13,7 +13,7 @@ import "swiper/css/effect-coverflow";
 interface NftData {
   image: string | StaticImageData;
   name: string;
-  link?: string;
+  link: string;
 }
 
 type Props = {

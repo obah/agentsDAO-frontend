@@ -50,12 +50,13 @@ export const Grid = styled.div<Props>`
   padding: 0 1rem;
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
-    padding: 0 7rem;
+    padding: 0 3rem;
   }
 
   @media screen and (min-width: ${theme.breakpoints.laptop}) {
     grid-template-columns: ${({ $multichild }) =>
       $multichild ? "1fr 1fr" : "1fr"};
     gap: 1rem;
+    padding: 0 7rem;
   }
 `;
