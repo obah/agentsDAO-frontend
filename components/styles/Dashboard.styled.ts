@@ -37,7 +37,7 @@ export const StyledDiv = styled.div<Props>`
   }
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
-    margin: 2rem 0;
+    /* margin: 1rem 0; */
 
     h3 {
       font-size: 1.5rem;
@@ -47,6 +47,10 @@ export const StyledDiv = styled.div<Props>`
       font-size: 1rem;
     }
   }
+
+  /* @media screen and (min-width: ${theme.breakpoints.laptop}) {
+    margin: 2rem 0;
+  } */
 `;
 
 export const Table = styled.div`

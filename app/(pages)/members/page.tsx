@@ -9,7 +9,10 @@ import {
   MembersArea,
   MembersSection,
   OwnerCard,
+  ImageWrapper,
 } from "@/components/styles/Members.styled";
+import ProfileNFT from "@/assets/images/ProfileNFT.jpg";
+import Image from "next/image";
 
 export default function Page() {
   const [memberSize, setMemberSize] = useState<number>(0);
@@ -32,17 +35,20 @@ export default function Page() {
           </Table>
 
           <OwnerCard>
-            <div>{/*image here*/}</div>
+            <ImageWrapper>
+              <Image src={ProfileNFT} alt="profile image" />
+            </ImageWrapper>
+            <div>
+              <h3
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="0x9ce826910f5e22A6e22A6a0418033b2677505752"
+                data-tooltip-place="top"
+              >
+                Obaloluwa10
+              </h3>
 
-            <h3
-              data-tooltip-id="my-tooltip"
-              data-tooltip-content="0x9ce826910f5e22A6e22A6a0418033b2677505752"
-              data-tooltip-place="top"
-            >
-              Obaloluwa10
-            </h3>
-
-            <p>DAO Maximalist, Blockchain Engineer, Digital Collector</p>
+              <p>DAO Maximalist, Blockchain Engineer, Digital Collector</p>
+            </div>
           </OwnerCard>
         </StyledDiv>
 
