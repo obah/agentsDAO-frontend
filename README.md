@@ -39,6 +39,7 @@ Users need and should be able to:
 ### Built with
 
 - NextJs
+- Typescript
 - Styled Components
 - EthersJs
 - Solidity
