@@ -13,11 +13,12 @@ export const StyledMain = styled.main`
 
 export const StyledSection = styled.section`
   max-width: 1600px;
+  margin: 0 auto;
 `;
 
 export const Title = styled.div`
   background-color: ${theme.colors.primary};
-  padding: 1rem 1.2rem;
+  padding: 1.65rem 1.2rem;
 
   h1 {
     font-size: 1.25rem;
@@ -31,6 +32,10 @@ export const Title = styled.div`
     margin: 0 0 1 rem;
   }
 
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    padding: 2.5rem 2rem;
+  }
+
   @media screen and (min-width: ${theme.breakpoints.laptop}) {
     padding: 2rem 6rem;
 
@@ -41,6 +46,10 @@ export const Title = styled.div`
     h2 {
       font-size: 2.2rem;
     }
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.desktop}) {
+    width: 100vw;
   }
 `;
 

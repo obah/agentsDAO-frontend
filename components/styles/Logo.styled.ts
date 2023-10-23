@@ -8,13 +8,17 @@ interface Props {
 export const Logo = styled.p<Props>`
   font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: ${theme.colors.default};
   transform: ${({ $type }) =>
     $type === "straight" ? "none" : "rotate(-20deg)"};
   animation: flickering 1.8s infinite alternate;
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.laptop}) {
     font-size: 2rem;
   }
 

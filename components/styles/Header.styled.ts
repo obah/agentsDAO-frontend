@@ -92,15 +92,18 @@ export const MenuBtn = styled.div`
 
 export const StyledNav = styled.nav`
   position: fixed;
-  top: 51px;
+  top: 70px;
   right: 0;
   width: 100vw;
   z-index: 10;
+  transform: translateX(-100%);
   visibility: hidden;
   background: ${theme.colors.primary};
+  transition: all 200ms ease-in;
 
   &.open {
     visibility: visible;
+    transform: translateX(0%);
   }
 
   ul {
@@ -148,9 +151,14 @@ export const StyledNav = styled.nav`
     }
   }
 
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    top: 80px;
+  }
+
   @media screen and (min-width: ${theme.breakpoints.laptop}) {
     position: static;
     visibility: visible;
+    transform: translateX(0%);
     width: 100%;
 
     ul {
