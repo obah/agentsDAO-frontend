@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Agents - A Decentralised Autonouse Organisation(DAO) for digital collectors
 
-## Getting Started
+This project implements a DAO on the Ethereum Blockchain. It has 2 repos, the blockchain repo containing the smart contracts - [Agents-DAO repo](https://github.com/obah/agents-dao) and deployments to test net. And the 2nd repo, containing the frontend part of the project - [Agents-DAO frontend](https://github.com/obah/agentsDAO-frontend).
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+  - [The problem](#the-problem)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### The problem
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Users need and should be able to:
 
-## Learn More
+- Mint AgentsNFT to have access to the DAO. NFT can be transferred also
+  - There whitelist slots for free minting, and its taken into account when calculating total supply of the NFT.
+- A smart contract to handle the governing and operations on the DAO
+  - Making of proposals to buy an asset
+  - Voting in support or against a proposal
+  - Keeping track of the validity period for a proposal, then executing or dismissing it after the time elapses
+- Deployment of both contracts on an Ethereum test network
+- An well designed and responsive frontend to allow interaction with the smart contracts deployed on the blockchain
 
-To learn more about Next.js, take a look at the following resources:
+### Links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Agents Frontend repo URL: [Visit](https://github.com/obah/agentsDAO-frontend)
+- Agents DAO repo URL: [Visit](https://github.com/obah/agents-dao)
+- Agents NFT repo URL: [Visit](https://github.com/obah/agents-nft)
+- Live Site URL: [Visit](https://agents-dao-frontend.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## My process
 
-## Deploy on Vercel
+### Built with
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- NextJs
+- Styled Components
+- EthersJs
+- Solidity
+- Hardhat
+- RainbowKit
+- SwiperJs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Continued development
+
+- Better UI on the dashboard and the core functionalities - making proposals and voting
+
+## Author
+
+- Website - [Obaloluwa Olusoji](https://www.obaloluwa.com)
