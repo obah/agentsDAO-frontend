@@ -1,6 +1,6 @@
 # The Agents - A Decentralised Autonouse Organisation(DAO) for digital collectors
 
-This project implements a DAO on the Ethereum Blockchain. It has 2 repos, the blockchain repo containing the smart contracts - [Agents-DAO repo](https://github.com/obah/agents-dao) and deployments to test net. And the 2nd repo, containing the frontend part of the project - [Agents-DAO frontend](https://github.com/obah/agentsDAO-frontend).
+This project implements a DAO on the Ethereum Blockchain. It has 2 main repos, the blockchain repo containing the smart contracts - [Agents-DAO repo](https://github.com/obah/agents-dao) and deployments to test net. And this, the 2nd repo, containing the frontend part of the project - [Agents-DAO frontend](https://github.com/obah/agentsDAO-frontend).
 
 ## Table of contents
 
