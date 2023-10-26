@@ -29,7 +29,7 @@ export const StyledButton = styled.a<Props>`
   transition: transform ease-out 200ms;
 
   &:hover {
-    transform: scale(1.1, 1.05);
+    transform: scale(1.05, 1.025);
   }
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
@@ -58,7 +58,7 @@ export const StyledLink = styled(Link)<Props>`
   transition: transform ease-out 200ms;
 
   &:hover {
-    transform: scale(1.1, 1.05);
+    transform: scale(1.05, 1.025);
   }
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
@@ -89,7 +89,7 @@ export const StyledButton2 = styled.button<Props>`
   transition: transform ease-out 200ms;
 
   &:hover {
-    transform: scale(1.1, 1.05);
+    transform: scale(1.05, 1.025);
     cursor: pointer;
   }
 
