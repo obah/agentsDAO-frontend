@@ -74,6 +74,20 @@ export const StyledSection = styled.section<Props>`
       margin: 2rem 0 0;
     }
   }
+
+  @media screen and (min-width: ${theme.breakpoints.laptop}) {
+    h1 {
+      margin: 1rem 0 2rem;
+    }
+
+    h2 {
+      margin: 2rem 0 3rem;
+    }
+
+    h1 ~ p {
+      margin: 0 0 5rem;
+    }
+  }
 `;
 
 export const SectionContainer = styled.div`
@@ -163,6 +177,74 @@ export const ImageWrapper = styled.div`
 
     img:nth-child(3) {
       display: block;
+    }
+  }
+`;
+
+export const AnimatedWaves = styled.div`
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  background: transparent;
+  overflow: hidden;
+
+  div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px;
+  }
+
+  div:nth-child(1) {
+    animation: wave 40s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+
+  div:nth-child(2) {
+    animation: wave2 25s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+
+  div:nth-child(3) {
+    animation: wave 40s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+
+  div:nth-child(4) {
+    animation: wave2 20s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+
+  @keyframes wave {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }
+
+  @keyframes wave2 {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: -1000px;
     }
   }
 `;
